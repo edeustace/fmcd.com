@@ -7,22 +7,30 @@
         ],
         "uid": "_home_link"
     },
-    /*
-    Projects here:
-    */ 
+ 
     {
-        "title": "Duncan Mcauley",
-        "description": "description",
+        "title": "LGS Bayreuth 2016",
+        "description": "An entry for the landscape design competition. The entry includes a design concept for the landscape exhibition as well as concepts for the permanent use of the park and connecting spaces.",
         "images": [
-            "/images/image_two.jpg",
-            "/images/image_four.jpg"
+            "/images/bayreuth_01.jpg",
+            "/images/bayreuth_02.jpg",
+             "/images/bayreuth_03.jpg",
+             "/images/bayreuth_07.jpg",
+             "/images/bayreuth_05.jpg"
+
         ]
     },
     {
         "title": "Vi, Berlin",
         "description": "2 desc",
         "images": [
-            "/images/image_one.jpg"
+            "/images/vogelsang_01.jpg",
+             "/images/vogelsang_02.jpg",
+              "/images/vogelsang_03.jpg",
+               "/images/vogelsang_04.jpg",
+                "/images/vogelsang_05.jpg",
+                 "/images/vogelsang_06.jpg",
+                  "/images/vogelsang_07.jpg"
         ]
     },
     {
