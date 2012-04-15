@@ -98,6 +98,10 @@ class @com.ee.ProjectView
   If this project view contains multiple images show the next one to the right
   ###
   showNext: -> 
+
+    if @imageIds.length <= 1
+      return 
+
     nextIndex = if @currentIndex == @imageIds.length - 1 then 0 else @currentIndex + 1
     @setCurrentImage nextIndex, "right"
 
@@ -105,6 +109,9 @@ class @com.ee.ProjectView
   If this project view contains multiple images show the next one to the left 
   ###
   showPrevious: ->
+    if @imageIds.length <= 1
+      return 
+
     index = if @currentIndex == 0 then @imageIds.length - 1 else @currentIndex - 1
     @setCurrentImage index, "left"
 

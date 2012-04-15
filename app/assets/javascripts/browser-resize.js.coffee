@@ -2,12 +2,25 @@
 console.log "browser_resize"
 
 imageResize = ->
-  newWidth = $('.work-holder').width()
-  finalWidth = if newWidth < 1371 then 1371 else newWidth
-  com.ee.appWidth = finalWidth
 
-  console.log "setting width to: #{finalWidth}"
-  $(".project-img").width( finalWidth )
+  STANDARD_WIDTH = 1371
+  STANDARD_HEIGHT = 850 
+
+  com.ee.appWidth =  Math.max( $('.work-holder').width(), STANDARD_WIDTH )
+  com.ee.appHeight = Math.max( $('.work-holder').height(), STANDARD_HEIGHT)
+
+  console.log "w: #{com.ee.appWidth}, h: #{com.ee.appHeight}"
+
+  #find out who is off the largest
+  wDiff = com.ee.appWidth - STANDARD_WIDTH
+  hDiff = com.ee.appHeight - STANDARD_HEIGHT
+
+  if wDiff >= hDiff
+    $(".project-img").height( '' )
+    $(".project-img").width( Math.max(com.ee.appWidth, STANDARD_WIDTH) )
+  else
+    $(".project-img").width('')
+    $(".project-img").height( Math.max(com.ee.appHeight, STANDARD_HEIGHT) )
 
   null
 
