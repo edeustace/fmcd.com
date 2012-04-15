@@ -1,0 +1,116 @@
+$main-color: rgba(94,57,73, 0.7)
+$bar-width: 195px
+$content-top: 300px
+$content-padding: 8px
+$animation-duration: 430ms
+
+body
+  overflow-x: hidden
+  overflow-y: hidden
+  font-family: 'Imprima', sans-serif
+  font-size: 15px
+  background-color: opacify($main-color, 1)
+
+li
+  padding: 2px
+
+.brand
+  color: rgba(255,255,255, 0.9)
+
+.bar-holder
+  width: 100%
+  height: 100%
+  position: absolute
+  z-index: 100045
+  left: 0px
+  top: 0px
+
+  .left-bar
+    width: $bar-width
+    float: left
+    height: 100%
+    background-color: darken($main-color, 20%)
+    z-index: 10003
+
+  .right-bar
+    right: 0px
+    position: absolute
+    background-color: transparentize( $main-color, 0.1)
+    width: $bar-width
+    height: 100%
+    color: white
+
+    #project-view-title
+      font-weight: bold
+
+    #project-view-description
+      font-size: 12px
+
+  .bar-contents
+    padding: $content-padding
+    position: absolute
+    top: $content-top
+
+    a
+      text-decoration: none
+      color: lighten( $main-color, 40%)
+    
+    .link-selected
+      font-weight: bold
+      color: white
+
+
+.work-holder
+  width: 100%
+  height: 100%
+  margin: 0 auto 
+
+  #project-view-images
+    
+    width: 100%
+    height: 100%
+    top: 0px  
+
+  .image-one
+
+.hidden
+  visibility: hidden
+
+.content-holder,
+.project-holder
+  left: 0px
+  top: 0px
+  position: absolute
+  //+transition-property(top)
+
+.top-animatable
+  //-webkit-transition: top 350ms linear
+  -webkit-transition: top $animation-duration ease-in-out
+
+.left-animatable
+  //-webkit-transition: left 350ms linear
+  -webkit-transition: left $animation-duration ease-in-out
+
+.north
+  position:absolute
+  top: -850px
+
+.south
+  top: 850px
+
+.project-img
+  position: absolute
+
+#_contact_content,
+#_information_content
+  width: 100%
+  height: 100%
+  background-color: opacify($main-color,1)
+
+.text-base
+  position: absolute
+  top: $content-top
+  left: $bar-width
+  padding: $content-padding
+   
+    

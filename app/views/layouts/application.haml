@@ -1,0 +1,53 @@
+# encoding: utf-8
+!!! XML
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %title fmcd.com
+
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Imprima"
+   
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+    :javascript
+      $(document).ready(function(){
+        var newData = #{@json_data}
+        controller = new com.ee.MainPageController(newData)
+      })
+
+
+%body
+  .bar-holder
+    .left-bar
+      .bar-contents
+        .brand 
+          %a{ :href => "javascript:void(0)", :id => "_home_link"}
+            = "fiona mcdermott"
+        %br/
+        %br/
+        %ul{ :class => "project-menu"}
+        %br/
+        %br/
+        %a{ :href => "javascript:void(0)", :id => "_information_link"}
+          = "information"
+        %br/
+        %a{ :href => "javascript:void(0)", :id => "_contact_link"}
+          = "contact"
+    .right-bar
+      .bar-contents
+        #project-view-title
+        #project-view-description
+
+  .work-holder
+    #project-view-images
+    .content-holder{ :id => "_information_content" }
+      .text-base information content
+
+    .content-holder{ :id => "_contact_content" }
+      .text-base contact content
+
+
+
+
+
