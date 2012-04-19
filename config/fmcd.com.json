@@ -19,7 +19,7 @@
     },
     {
         "title": "The Hidden Leek",
-        "description": " Logo design, website design and realisation for the Oslo based copywriting and proofreading company. www.pureedit.net ",
+        "description": "The Hidden Leek is Hidden!",
         "images": [
             "/images/hiddenleek_01.jpg"
            
@@ -108,7 +108,8 @@
         "title": "Information",
         "description": "",
         "uid": "_information_link",
-        "contentUid": "_information_content"
+        "contentUid": "_information_content",
+        "bg-color" : "#4400ff"
     },
     {
         "title": "Contact",

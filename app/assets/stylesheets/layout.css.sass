@@ -1,8 +1,9 @@
-$main-color: rgba(39, 43, 49, 0.7)
+$main-color: rgba(39, 43, 49, 1)
 $bar-width: 195px
 $content-top: 300px
 $content-padding: 8px
 $animation-duration: 430ms
+$line-height: 18px
 
 body
   overflow-x: hidden
@@ -17,6 +18,16 @@ li
 .brand
   color: rgba(255,255,255, 0.9)
 
+.columns
+  div
+    float: left
+    width: 200px
+    color: white
+    line-height: $line-height
+    font-size: 12px
+    padding-right: 10px
+    padding-left: 10px
+
 .bar-holder
   width: 100%
   height: 100%
@@ -25,20 +36,31 @@ li
   left: 0px
   top: 0px
 
+
   .left-bar
     width: $bar-width
     float: left
     height: 100%
-    background-color: darken($main-color, 20%)
+    background-color: transparentize( $main-color, 0.7)
+    -webkit-transition: background-color $animation-duration ease-in-out
     z-index: 10003
+    &:hover
+      background-color: transparentize($main-color, 0.3)
+
+  #_home_link
+    font-size: 15px
 
   .right-bar
     right: 0px
+    //left: 195px  
     position: absolute
-    background-color: transparentize( $main-color, 0.1)
-    width: $bar-width
+    background-color: transparentize( $main-color, 0.7)
+    width: $bar-width + 100
     height: 100%
     color: white
+    -webkit-transition: background-color $animation-duration ease-in-out
+    &:hover
+      background-color: transparentize($main-color, 0.3)
 
     #project-view-title
       font-weight: bold
@@ -50,10 +72,15 @@ li
     padding: $content-padding
     position: absolute
     top: $content-top
-
+    line-height: $line-height
+    .shadowed
+      text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
+    
     a
+      text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
       text-decoration: none
-      color: lighten( $main-color, 40%)
+      color: lighten( $main-color, 80%)
+      font-size: 12px
     
     .link-selected
       font-weight: bold
@@ -115,5 +142,11 @@ li
   top: $content-top
   left: $bar-width
   padding: $content-padding
-   
+
+
+#_information_content
+  background-color: darken( desaturate( #f94450, 40%), 20% )
+
+#_contact_content
+  background-color: darken( desaturate( #4f3fff, 70%), 20% )
     
