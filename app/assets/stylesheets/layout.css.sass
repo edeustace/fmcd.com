@@ -2,7 +2,7 @@ $main-color: rgba(39, 43, 49, 1)
 $bar-width: 225px
 $content-top: 100px
 $content-padding: 8px
-$animation-duration: 430ms
+$animation-duration: 1200ms
 $line-height: 18px
 
 body
@@ -128,6 +128,13 @@ hr.thin
   position: absolute
   //+transition-property(top)
 
+@mixin tr($property, $tm)
+  -webkit-transition: $property $tm ease-in-out
+  -moz-transition: $property $tm ease-in-out 
+  -o-transition: $property $tm ease-in-out
+  -ms-transition: $property $tm ease-in-out
+  transition: $property $tm ease-in-out
+
 .top-animatable
   //-webkit-transition: top 350ms linear
   -webkit-transition: top $animation-duration ease-in-out
@@ -135,6 +142,9 @@ hr.thin
 .left-animatable
   //-webkit-transition: left 350ms linear
   -webkit-transition: left $animation-duration ease-in-out
+  @include tr(left, $animation-duration )
+
+
 
 .north
   position:absolute

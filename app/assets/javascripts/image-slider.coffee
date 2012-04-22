@@ -23,41 +23,57 @@ class @com.ee.ImageSlider
     #$(parentDiv).append html
 
   showPrevious: ->
-    
     leftIndex = com.ee.mod @currentIndex - 1, @images.length
-    @_buildPane(leftIndex, @currentIndex, 1)
+    @_show(0, leftIndex, @currentIndex,  1)
+    null
 
-    $(@parentDiv).find("#transition-pane").animate
-      left: "0px"
-    , 500,
-      =>
-      #, 1500,
-        console.log "transition completed"
-        @_setMainPane leftIndex
-      #  @_setMainPane leftIndex
-        @_removeTransitionPane()
-      #  @_removeTransitionPane()
-  
-  showNext: ->
-
+  showNext: -> 
     rightIndex = com.ee.mod @currentIndex + 1, @images.length
-    @_buildPane(@currentIndex, rightIndex, 0)
-    #$(@parentDiv).find("#main-pane").css('visibility', 'hidden')
+    @_show(com.ee.appWidth, @currentIndex, rightIndex, 0)
+    null
 
+  _$tp: -> $(@parentDiv).find("#transition-pane")
+
+  _show: (destinationPx, leftIndex, rightIndex, indexToShow) ->
+
+    @_buildPane(leftIndex, rightIndex, indexToShow)
+
+
+    @_$tp()
+      .addClass('left-animatable')
+
+    cb = =>
+      @_$tp().css('left', "-#{destinationPx}px")
+
+    setTimeout( cb, 100)
+
+    cbDone = =>
+      if indexToShow == 1
+        @_setMainPane leftIndex 
+      else
+        @_setMainPane rightIndex
+
+      @_removeTransitionPane()
+
+    setTimeout( cbDone, 1300 )
+
+    ### 
     $(@parentDiv).find("#transition-pane").animate
-      left: "-#{com.ee.appWidth}px"
+      left: "-#{destinationPx}px"
       leaveTransform: true
     , 500,
       =>
         console.log "transition completed"
-        @_setMainPane rightIndex
+        if indexToShow == 1
+          @_setMainPane leftIndex 
+        else
+          @_setMainPane rightIndex
+
+
         @_removeTransitionPane()
-        
-
-
-    
+    ###
     null
-  
+
   reset: ->
     null
 
