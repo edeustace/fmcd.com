@@ -111,9 +111,9 @@ class @com.ee.MainPageController
       @transitionComplete = true
       console.log "onShowComplete: @transitionComplete: #{@transitionComplete}"
       
+    @transitionComplete = false
     incomingProject.show direction, onShowCallback, a
     
-    @transitionComplete = false
     console.log "begin show: @transitionComplete: #{@transitionComplete}"
 
     @currentLink = a

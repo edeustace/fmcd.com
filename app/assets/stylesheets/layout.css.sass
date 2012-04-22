@@ -1,6 +1,6 @@
 $main-color: rgba(39, 43, 49, 1)
 $bar-width: 225px
-$content-top: 300px
+$content-top: 100px
 $content-padding: 8px
 $animation-duration: 430ms
 $line-height: 18px
@@ -17,6 +17,16 @@ li
 
 .brand
   color: rgba(255,255,255, 0.9)
+
+hr
+  padding: 0px
+  margin: 0px
+  border: none
+
+hr.thin
+  border-top: dashed 1px transparentize( #d6e3f5, 0.8 )
+
+
 
 .columns
   div
@@ -41,11 +51,11 @@ li
     width: $bar-width
     float: left
     height: 100%
-    background-color: transparentize( $main-color, 1)
+    background-color: transparentize( $main-color, 0.3)
     -webkit-transition: background-color $animation-duration ease-in-out
     z-index: 10003
     &:hover
-      background-color: transparentize($main-color, 0.3)
+      background-color: transparentize($main-color, 1)
 
   #_home_link
     font-size: 15px
@@ -54,13 +64,13 @@ li
     right: 0px
     //left: 195px  
     position: absolute
-    background-color: transparentize( $main-color, 1)
+    background-color: transparentize( $main-color, 0)
     width: $bar-width + 0
     height: 100%
     color: white
     -webkit-transition: background-color $animation-duration ease-in-out
     &:hover
-      background-color: transparentize($main-color, 0.3)
+      background-color: transparentize($main-color, 1)
 
     #project-view-title
       font-weight: bold
@@ -68,16 +78,17 @@ li
     #project-view-description
       font-size: 12px
 
+
   .bar-contents
+    position: relative
     padding: $content-padding
-    position: absolute
     top: $content-top
     line-height: $line-height
     .shadowed
-      text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
+      //text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
     
     a
-      text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
+      //text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
       text-decoration: none
       color: lighten( $main-color, 80%)
       font-size: 12px
@@ -86,6 +97,12 @@ li
       font-weight: bold
       color: white
 
+  .info-box
+    padding: $content-padding
+    top: 100px
+    line-height: $line-height
+    color: white
+    position: relative
 
 .work-holder
   overflow-x: scroll
