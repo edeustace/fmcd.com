@@ -1,7 +1,9 @@
 #browser_resize
 console.log "browser_resize"
 
-imageResize = ->
+imageResize = (className)->
+  
+  className = ".project-img" if !className?
 
   STANDARD_WIDTH = 1371
   STANDARD_HEIGHT = 850 
@@ -14,22 +16,17 @@ imageResize = ->
   #find out who is off the largest
   wDiff = com.ee.appWidth - STANDARD_WIDTH
   hDiff = com.ee.appHeight - STANDARD_HEIGHT
+  
+  console.log "className #{className}"
+  com.ee.snapTo = if wDiff >= hDiff then "w" else "h"
 
   if wDiff >= hDiff
-    $(".project-img").height( '' )
-    $(".project-img").width( Math.max(com.ee.appWidth, STANDARD_WIDTH) )
+    $(className).height( '' )
+    $(className).width( Math.max(com.ee.appWidth, STANDARD_WIDTH) )
   else
-    $(".project-img").width('')
-    $(".project-img").height( Math.max(com.ee.appHeight, STANDARD_HEIGHT) )
+    $(className).width('')
+    $(className).height( Math.max(com.ee.appHeight, STANDARD_HEIGHT) )
 
   null
 
-$(window).bind 'resize', ->
-  imageResize()
-
-
-$(document).ready ->
-
-  setTimeout =>
-    imageResize()
-  , 50
+window.imageResize = imageResize

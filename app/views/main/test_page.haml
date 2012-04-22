@@ -1,0 +1,41 @@
+- content_for :head do
+  :javascript
+    console.log( "for js head");
+
+    var newData = {
+                "title": "Answers",
+                "description": " Logo design, website design and realisation for the Oslo based copywriting and proofreading company. www.pureedit.net ",
+                "images": [
+                    "/images/answers_01.jpg",
+                   "/images/answers_02.jpg",
+                   "/images/answers_03.jpg",
+                   "/images/answers_04.jpg"
+                ]
+            }
+
+    $(window).bind('resize', function(){
+      imageResize(".image-slider-images")
+    });
+    
+    $(document).ready( function() {
+
+      imageResize('.image-slider-images')
+          
+      var slider = new com.ee.ImageSlider( $(".work-holder")[0], newData.images )
+      
+      $('body').keydown( function onKeyDown(e) {
+          if( e.keyCode == 37 )
+          {
+            slider.showPrevious();
+          }
+          else if( e.keyCode == 39 )
+          {
+            slider.showNext();
+          }
+      });
+
+    });
+
+%h1 Test Page
+
+.work-holder

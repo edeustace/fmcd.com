@@ -1,0 +1,40 @@
+- content_for :head do
+  :javascript
+    $(document).ready(function(){
+      var newData = #{@json_data}
+      controller = new com.ee.MainPageController(newData)
+    })
+
+.bar-holder
+  .left-bar
+    .bar-contents
+      .brand 
+        %a{ :href => "javascript:void(0)", :id => "_home_link"}
+          = "fiona mcdermott"
+      %br/
+      %ul{ :class => "project-menu"}
+      %br/
+      %br/
+      %a{ :href => "javascript:void(0)", :id => "_information_link"}
+        = "information"
+      %br/
+      %a{ :href => "javascript:void(0)", :id => "_contact_link"}
+        = "contact"
+    %br/
+    %br/
+    .info-box
+      %hr.thin
+      #project-view-title
+      #project-view-description
+  //.right-bar
+  //  .bar-contents
+  //    #project-view-title
+  //    #project-view-description
+
+.work-holder
+  #project-view-images
+  .content-holder{ :id => "_information_content" }
+    = render "information"
+
+  .content-holder{ :id => "_contact_content" }
+    = render "contact"
