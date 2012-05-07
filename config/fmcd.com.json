@@ -19,9 +19,12 @@
     },
     {
         "title": "The Hidden Leek",
-        "description": "The Hidden Leek is Hidden!",
+        "description": "The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in the mid west of Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity.",
         "images": [
-            "/images/hiddenleek_01.jpg"
+            "/images/leek_01.jpg",
+            "/images/leek_02.jpg",
+            "/images/leek_05.jpg",
+            "/images/leek_03.jpg"
            
         ]
     },
