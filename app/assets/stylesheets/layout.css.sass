@@ -1,15 +1,15 @@
 $main-color: rgba(39, 43, 49, 1)
 $bar-width: 245px
-$content-top: 300px
-$content-padding: 8px
+$content-top: 200px
+$content-padding: 20px
 $animation-duration: 430ms
 $line-height: 18px
 
 body
   overflow-x: hidden
   overflow-y: hidden
-  font-family: 'PT Serif', serif
-  font-size: 12px
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 11px
   background-color: opacify($main-color, 1)
 
 li
@@ -22,9 +22,9 @@ li
   div
     float: left
     width: 200px
-    color: white
+    color: f5f5f5
     line-height: $line-height
-    font-size: 12px
+    font-size: 10px
     padding-right: 10px
     padding-left: 10px
 
@@ -38,6 +38,8 @@ li
 
 
   .left-bar
+    font-family: Arial, Helvetica, sans-serif
+    font-size: 12px
     width: $bar-width
     float: left
     height: 100%
@@ -46,9 +48,12 @@ li
     z-index: 10003
     &:hover
       background-color: transparentize($main-color, 0.3)
+  #_logo
+    float: top
+    padding-right: 300px
 
   #_home_link
-    font-size: 15px
+    font-size: 11px
 
   .right-bar
     right: 0px
@@ -57,16 +62,25 @@ li
     background-color: transparentize( $main-color, 1)
     width: $bar-width + 0
     height: 100%
-    color: white
+    color: f5f5f5
     -webkit-transition: background-color $animation-duration ease-in-out
     &:hover
       background-color: transparentize($main-color, 0.3)
 
     #project-view-title
+      font-family: 'Raleway', Helvetica, Arial, sans-serif
+      font-size: 14px
       font-weight: bold
+      text-transform: uppercase
+      //text-decoration: underline
+
 
     #project-view-description
-      font-size: 12px
+      font-family: Arial, Helvetica, sans-serif
+      padding-top: 0px
+      font-size: 11px
+      line-height: 18px
+      //font-style: italic
 
   .bar-contents
     padding: $content-padding
@@ -77,14 +91,14 @@ li
       text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
     
     a
-      text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
+      //text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
       text-decoration: none
       color: lighten( $main-color, 80%)
-      font-size: 12px
+      font-size: 11px
     
     .link-selected
       font-weight: bold
-      color: white
+      color: f5f5f5
 
 
 .work-holder
@@ -133,6 +147,7 @@ li
 
 #_contact_content,
 #_information_content
+  line-height: 40px
   width: 100%
   height: 100%
   background-color: opacify($main-color,1)
@@ -149,4 +164,5 @@ li
 
 #_contact_content
   background-color: darken( desaturate( #4f3fff, 70%), 20% )
+
     

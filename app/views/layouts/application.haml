@@ -5,7 +5,8 @@
   %head
     %title fmcd.com
 
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Serif"
+   
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Raleway:100"
 
    
     = stylesheet_link_tag "application", :media => "all"
@@ -24,18 +25,19 @@
     .left-bar
       .bar-contents
         .brand 
+          %img{ :src => "/images/fm-logo04.png", :id => "_logo"} 
           %a{ :href => "javascript:void(0)", :id => "_home_link"}
-            = "fiona mcdermott"
+            = ""
         %br/
         %br/
         %ul{ :class => "project-menu"}
         %br/
         %br/
         %a{ :href => "javascript:void(0)", :id => "_information_link"}
-          = "information"
+          = "INFORMATION"
         %br/
         %a{ :href => "javascript:void(0)", :id => "_contact_link"}
-          = "contact"
+          = "CONTACT"
     .right-bar
       .bar-contents
         #project-view-title
