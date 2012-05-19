@@ -45,8 +45,10 @@ class @com.ee.ProjectView
   ###
   beginSlideshow: ->
 
+    if !@projectData?
+      return
 
-    if( @projectData.images.nil? || @projectData.images.length <= 1 )
+    if( !@projectData.images? || @projectData.images.length <= 1 )
       return 
 
     @isSlideshowEnabled = true 
@@ -96,6 +98,10 @@ class @com.ee.ProjectView
   ###
   setCurrentImage: (index, direction) ->
     
+    if @transitionInProgress
+      return
+
+
     @updateCount index
     if @currentIndex == -1
       for id, imgIndex in @imageIds
@@ -107,6 +113,9 @@ class @com.ee.ProjectView
       @currentIndex = index
       return
     else
+
+      @transitionInProgress = true
+
 
       appWidth = "#{com.ee.appWidth}px"
 
@@ -122,13 +131,16 @@ class @com.ee.ProjectView
         $currentImage
           .removeClass('left-animatable')
           .addClass('hidden')
+        @transitionInProgress = false
 
       setTimeout currentCb, 550
 
       $nextImage = $("##{@imageIds[index]}")
+
       $nextImage
         .css('left', incomingPx)
         .removeClass('hidden')
+
 
       cb = =>
         $nextImage
@@ -165,35 +177,56 @@ class @com.ee.ProjectView
     index = if @currentIndex == 0 then @imageIds.length - 1 else @currentIndex - 1
     @setCurrentImage index, "right"
 
+  ###
+  Transition this project view out of the page, then hide it 
+  @param direction either 'up' or 'down'
+  ###
   hide: (direction) ->
-
+    console.log "ProjectView:hide: #{@projectData.title}, #{direction}"
     directionClass = if direction == "up" then "north" else "south"
-
+    height = com.ee.appHeight
+    height = 1200
+    ## TODO: TopPos needs to be the height of the scaled image.
+    topPos = if "up" then "-#{height}px" else "#{height}px"
+    console.log "top to -> #{topPos}"
+    
     @$holder()
       .addClass("top-animatable")
-      .addClass( directionClass )
+      .addClass(directionClass )
 
     cb1 = =>
-      @setCurrentImage 0
       @$holder()
         .addClass("hidden")
         .removeClass("top-animatable")
-        .removeClass(directionClass)
-    
-    setTimeout cb1, 500
+        .removeClass( directionClass )
+        @reset()
+
+    setTimeout cb1, 700
 
     @removeNavArrows @a
 
     @isSlideshowEnabled = false
-    clearInterval @slideshowIntervalUid 
+    clearInterval @slideshowIntervalUid
 
+  reset: ->
+    for id, imgIndex in @imageIds
+      $("##{id}").addClass("hidden")
+      $("##{id}").css('left', '0px')
+      $("##{id}").removeClass('left-animatable', '0px')
+    
+    $("##{@imageIds[0]}").removeClass('hidden')
+
+    @currentIndex = 0
+    null
 
   show: (direction, callback, a) ->
+    console.log "ProjecView:show: #{@projectData.title}, #{direction}"
     @a = a
     dirClass = if direction == "up" then "south" else "north"
 
-    @$holder()
-      .addClass(dirClass)
+
+    cb0 = =>
+      @$holder().addClass(dirClass)
 
     cb = =>
       @$holder()
@@ -201,7 +234,8 @@ class @com.ee.ProjectView
         .removeClass("hidden")
         .removeClass(dirClass)
 
-    setTimeout cb, 0
+    setTimeout cb0, 0
+    setTimeout cb, 10
 
     setTimeout =>
       callback( @imageIds.length )
