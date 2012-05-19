@@ -1,7 +1,7 @@
 {
 
-"logo" : "/images/fm-logo04.png",
-"slideshow_interval" : "3500",
+"logo" : "/images/fm-logo03.png",
+"slideshow_interval" : "4500",
 "default_bg_color" : "#000000",
 "projects" : [
    
@@ -9,14 +9,14 @@
         "title": "Welcome",
         "description": "Welcome to the portfolio website of <br/>Fiona McDermott, Spatial and Digital Media Designer, currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
         "images": [
-            "/images/home02.jpg"
+            "/images/home.jpg"
         ],
         "uid": "_home_link"
     },
         {
         "title": "Answers",
-        "description": " <font color='red'> Logo design, </font> website design and realisation for the Oslo based copywriting and proofreading company.<br/><a href='http://pureedit.net'>pureedit.net</a>",
-        "bg_color" : "#00ff00",
+        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting and redesigning the content for mobile and tablet formats. <br/> <br/> Digital Communications Award, 2011 <br/> iF Communication Design Award 2012 & 2011 <br/>  <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/>Agency: Virtual Identity <br/>  <br/>  ",
+        "bg_color" : "#efefef",
         "images": [
             "/images/answers_01.jpg",
            "/images/answers_02.jpg",
@@ -50,7 +50,7 @@
     },
      {
         "title": "Pure Edit",
-        "description": " Logo design, website design and realisation for the Oslo based copywriting and proofreading company. www.pureedit.net ",
+        "description": " Logo design, website design and realisation for the Oslo based copywriting and proofreading company. <br/><a href='http://pureedit.net'>pureedit.net</a> ",
          "bg_color" : "#ffff77",
         "images": [
             "/images/pureedit_01.jpg",
