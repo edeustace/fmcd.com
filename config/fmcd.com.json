@@ -1,4 +1,9 @@
-[
+{
+
+"logo" : "/images/fm-logo04.png",
+"slideshow_interval" : "3500",
+"default_bg_color" : "#000000",
+"projects" : [
    
     {
         "title": "Welcome",
@@ -9,8 +14,9 @@
         "uid": "_home_link"
     },
         {
-        "title": "01 | Answers",
-        "description": " <font color='red'> Logo design, </font> website design and realisation for the Oslo based copywriting and proofreading company.<br/><text decoration='underline'> www.pureedit.net </text decoration>",
+        "title": "Answers",
+        "description": " <font color='red'> Logo design, </font> website design and realisation for the Oslo based copywriting and proofreading company.<br/><a href='http://pureedit.net'>pureedit.net</a>",
+        "bg_color" : "#00ff00",
         "images": [
             "/images/answers_01.jpg",
            "/images/answers_02.jpg",
@@ -21,7 +27,7 @@
         ]
     },
     {
-        "title": "01 | Siemens",
+        "title": "Siemens",
         "description": " <font color='red'> Logo design, </font> website design and realisation for the Oslo based copywriting and proofreading company.<br/><text decoration='underline'> www.pureedit.net </text decoration>",
         "images": [
            "/images/siemens_09.jpg",
@@ -31,8 +37,9 @@
         ]
     },
     {
-        "title": "02 | The Hidden Leek ",
+        "title": "The Hidden Leek ",
         "description": " The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in Roscommon, Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity.",
+        "bg_color" : "#ff00ff",
         "images": [
             "/images/leek_01.jpg",
             "/images/leek_02.jpg",
@@ -42,8 +49,9 @@
         ]
     },
      {
-        "title": "03 | Pure Edit",
+        "title": "Pure Edit",
         "description": " Logo design, website design and realisation for the Oslo based copywriting and proofreading company. www.pureedit.net ",
+         "bg_color" : "#ffff77",
         "images": [
             "/images/pureedit_01.jpg",
             "/images/pureedit_04.jpg",
@@ -53,8 +61,9 @@
     },
  
     {
-        "title": "04 | LGS Bayreuth 2016",
+        "title": "LGS Bayreuth 2016",
         "description": "A competition entry for the design of the regional garden festival. The design includes concepts for permanent and temporary landscape exhibitions. alongside concepts for the permanent use of the park and connecting spaces. With the given competition theme of 'As the guest of Wilhelmine of Bayreuth', the design uses topographical elements and sightlines to provide views to views to the baroque palaces and parks built during her reign. Awarded the fourth prize. While at ST Raum A",
+        "bg_color" : "#77ff77",
         "images": [
             "/images/bayreuth_01.jpg",
             "/images/bayreuth_02.jpg",
@@ -65,8 +74,9 @@
         ]
     },
     {
-        "title": "05 | Forum Vogelsang",
+        "title": "Forum Vogelsang",
         "description": "The design is part of an invited competition entry for a permanent exhibition to document the story of 'NS- Ordensburg Vogelsang', an arrangement of barracks, community halls and sports arenas, built in the 1930s in order to train a new Nazi elite. The design concept focuses on the intimate connection between the historical location and contemporary processing of the contents. The exhibition is physically defined by two forms:one, a large glass wall and the other, a variety of v-shaped elements, which feature across the site, displaying information and acting as a way finding system. As well as contributing to the concept development, I was also responsible for the Interior perspectives, plans and multimedia screen design.",
+        "bg_color" : "#770000",
         "images": [
             "/images/vogelsang_01.jpg",
              "/images/vogelsang_02.jpg",
@@ -78,8 +88,9 @@
         ]
     },
     {
-        "title": "06 | Directions",
+        "title": "Directions",
         "description": " Experimental interface design that explores the dynamic relationship between human perception and our environment. Images of a journey through city space are combined with symbols and text so that the user can navigate themselves through the narrative sequence. ",
+        "bg_color" : "#0e77f0",
         "images": [
             "/images/timeline_01.jpg",
             "/images/timeline_02.jpg",
@@ -87,8 +98,9 @@
         ]
     },
     {
-        "title": "07 | Das Blaue Buch",
+        "title": "Das Blaue Buch",
         "description": "Inhouse publication for the Basel based architecture practice. The design is based on dual blue and white office colours. Printed on recycling paper and set on long envelope, double-sided paper. ",
+        "bg_color" : "#0000ff",
         "images": [
             "/images/Blauebuch_01.jpg",
             "/images/Blauebuch_02.jpg",
@@ -98,8 +110,9 @@
         ]
     },
    {
-        "title": "08 | Gundeldinger Feld",
+        "title": "Gundeldinger Feld",
         "description": "The Gundeldinger Feld in Basel is the site of a former compressor factory which in 2000 was transformed into a multi-purpose site encompassing local cultural institutions, small businesses and workshops. The publication celebrates the tenth anniversary of the opening . The design inflects the activities and events subsequent to the transformation of the former site into a multi-purpose space. ",
+         "bg_color" : "#00ff00",
         "images": [
             "/images/gundeldingerfeld_01.jpg",
             "/images/gundeldingerfeld_02.jpg",
@@ -110,8 +123,9 @@
     },
 
     {
-        "title": "09 | Other",
+        "title": "Other",
         "description": " Experimental interface design that explores the dynamic relationship between human perception and our environment. Images of a journey through city space are combined with symbols and text so that the user can navigate themselves through the narrative sequence. ",
+        "bg_color" : "#ff00ff",
         "images": [
             "/images/freiraum_01.jpg",
             "/images/freiraum_02.jpg",
@@ -124,7 +138,7 @@
         "description": "",
         "uid": "_information_link",
         "contentUid": "_information_content",
-        "bg-color" : "#4400ff"
+        "bg_color" : "#4400ff"
     },
     {
         "title": "Contact",
@@ -133,3 +147,4 @@
         "contentUid": "_contact_content"
     }
 ]
+}

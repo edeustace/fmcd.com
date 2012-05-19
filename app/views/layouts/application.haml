@@ -1,5 +1,5 @@
 # encoding: utf-8
-
+- parsed_json = ActiveSupport::JSON.decode(@json_data)
 !!! XML
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
@@ -15,8 +15,10 @@
 
     :javascript
       $(document).ready(function(){
+
+
         var newData = #{@json_data}
-        controller = new com.ee.MainPageController(newData)
+        controller = new com.ee.MainPageController(newData.projects, newData.slideshow_interval, newData.default_bg_color)
       })
 
 
@@ -24,9 +26,8 @@
   .bar-holder
     .left-bar
       .logo
-        %img{ :src => "/images/fm-logo04.png", :id => "_logo"} 
         %a{ :href => "javascript:void(0)", :id => "_home_link"}
-          = ""
+          %img{ :src => "#{parsed_json['logo']}", :id => "_logo"} 
       .bar-contents
         .h5.title projects 
         = render :partial => "line_break"
@@ -37,6 +38,7 @@
         %a{ :href => "javascript:void(0)", :id => "_information_link"}
           = "INFORMATION"
         %br/
+        %br/
         %a{ :href => "javascript:void(0)", :id => "_contact_link"}
           = "CONTACT"
     .right-bar
@@ -44,11 +46,11 @@
         #project-view-title.title
         = render :partial => "line_break"
         #project-view-description
+        #project-view-navigation-holder
 
   .work-holder
     #project-view-images
     .content-holder{ :id => "_information_content" }
       = render "information"
-
     .content-holder{ :id => "_contact_content" }
       = render "contact"

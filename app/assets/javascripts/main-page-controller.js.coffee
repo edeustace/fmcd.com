@@ -6,7 +6,7 @@ com.ee = (com.ee || {})
 class @com.ee.MainPageController
 
 
-  constructor: (@mainPageData)->
+  constructor: (@mainPageData, @slideshowInteval, @defaultBgColor)->
 
     @LEFT = 37
     @RIGHT = 39
@@ -28,11 +28,11 @@ class @com.ee.MainPageController
       else
         linkUid = "__project__#{index}"
         $(".project-menu").append """ 
-          <li><a href="javascript:void(0)" id="#{linkUid}">#{data.title}</a></li>
+          <li><a href="javascript:void(0)" id="#{linkUid}">#{@formatIndex(index)} | #{data.title}</a></li>
           """
       $link = $("##{linkUid}")
       link = $link[0]
-      pv = new com.ee.ProjectView(data, index)
+      pv = new com.ee.ProjectView(data, index, @slideshowInteval, @defaultBgColor)
       $.data link, 'projectView', pv
       $link.click (e) => @onMenuLinkClick e
       @links.push(link)
@@ -42,7 +42,8 @@ class @com.ee.MainPageController
 
     @navigateToLink @links[0]
 
-
+  formatIndex: (index) ->
+    if( index < 10 ) then "0#{index}" else "#{index}"
 
   onKeyDown: (e) ->
     console.log "key down: #{e.keyCode}"
@@ -65,6 +66,7 @@ class @com.ee.MainPageController
 
   getNextLink: -> @_getLink(1, @links.length - 1)
   getPreviousLink: -> @_getLink( -1, 0 )
+
 
   _getLink: ( increment, endIndex ) ->
     index = @links.indexOf @currentLink
