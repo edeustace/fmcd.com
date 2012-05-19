@@ -4,16 +4,34 @@ $content-top: 200px
 $content-padding: 20px
 $animation-duration: 430ms
 $line-height: 18px
+$logo-top: 100px
+$default-font-family: Helvetica, Arial, sans-serif
+$title-font-family: 'Raleway', Helvetica, Arial, sans-serif
 
-body
+
+body,
+html,
+*
+  font-family: $default-font-family
   overflow-x: hidden
   overflow-y: hidden
-  font-family: Arial, Helvetica, sans-serif
   font-size: 11px
   background-color: opacify($main-color, 1)
 
 li
   padding: 2px
+
+.title
+  font-family: $title-font-family
+  color: white
+  font-size: 14px
+  font-weight: bold
+  text-transform: uppercase
+
+.line-break
+  color: white
+  padding-bottom: 8px
+
 
 .brand
   color: rgba(255,255,255, 0.9)
@@ -38,7 +56,6 @@ li
 
 
   .left-bar
-    font-family: Arial, Helvetica, sans-serif
     font-size: 12px
     width: $bar-width
     float: left
@@ -48,9 +65,14 @@ li
     z-index: 10003
     &:hover
       background-color: transparentize($main-color, 0.3)
-  #_logo
-    float: top
-    padding-right: 300px
+
+    .logo
+      top: $logo-top
+      position: absolute
+    
+    .h5
+      color: white
+      font-family: $title-font-family
 
   #_home_link
     font-size: 11px
@@ -68,19 +90,12 @@ li
       background-color: transparentize($main-color, 0.3)
 
     #project-view-title
-      font-family: 'Raleway', Helvetica, Arial, sans-serif
-      font-size: 14px
-      font-weight: bold
-      text-transform: uppercase
-      //text-decoration: underline
 
 
     #project-view-description
-      font-family: Arial, Helvetica, sans-serif
       padding-top: 0px
       font-size: 11px
       line-height: 18px
-      //font-style: italic
 
   .bar-contents
     padding: $content-padding
