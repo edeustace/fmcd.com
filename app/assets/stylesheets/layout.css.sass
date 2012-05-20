@@ -147,13 +147,24 @@ li
   position: absolute
   //+transition-property(top)
 
+@mixin animatable( $property )
+  +transition-property($property)
+  +transition-duration($animation-duration)
+  +transition-timing-function(ease-in-out)
+  
 .top-animatable
   //-webkit-transition: top 350ms linear
-  -webkit-transition: top $animation-duration ease-in-out
+
+  @include animatable( top )
+  //-webkit-transition: top $animation-duration ease-in-out
 
 .left-animatable
   //-webkit-transition: left 350ms linear
-  -webkit-transition: left $animation-duration ease-in-out
+  @include animatable( left )
+  //-webkit-transition: left $animation-duration ease-in-out
+
+
+
 
 .north
   position:absolute
