@@ -46,7 +46,6 @@ class @com.ee.MainPageController
     if( index < 10 ) then "0#{index}" else "#{index}"
 
   onKeyDown: (e) ->
-    console.log "key down: #{e.keyCode}"
 
     if !@transitionComplete
       return

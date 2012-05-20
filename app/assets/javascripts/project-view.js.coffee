@@ -1,5 +1,7 @@
-#project-view.js.coffee
-
+###
+A representation of a Project.
+It slides up or down when being shown and the images within the project slide left or right.
+###
 class @com.ee.ProjectView
 
   constructor: (@projectData, @index, @slideshowInterval, @defaultBgColor) ->
@@ -8,12 +10,11 @@ class @com.ee.ProjectView
     @imageHolderId = "project-view-images"
     @imageIds = []
     @$navHolder = $("#project-view-navigation-holder")
-
-    @slideshowIntervalUid
     @isSlideshowEnabled = false
-
     @contentUid = "project__#{@index}"
     @isTintEnabled = true
+
+    @timeoutUids = []
 
     if @projectData.uid?
       @isTintEnabled = false
@@ -21,15 +22,12 @@ class @com.ee.ProjectView
     if @projectData.contentUid?
       @contentUid = @projectData.contentUid
       @$holder().addClass('hidden')
-      console.log "this view is already linked to some content ignore images"
     else
       imgHtml = ""
-      console.log "project data images: #{@projectData.images}"
       for img_path, imgIndex in @projectData.images
         imageUid = """_project_#{@index}_img_#{imgIndex}"""
         imgHtml += """<img id="#{imageUid}" src="#{img_path}" class="project-img"/>"""
         @imageIds.push(imageUid)
-
    
 
       $("##{@imageHolderId}").append """<div id='#{@contentUid}' 
@@ -41,7 +39,7 @@ class @com.ee.ProjectView
       @setCurrentImage 0
 
   ###
-  Start the slideshow if there are more than one image to show
+  Start the slideshow if there are more than one images to show
   ###
   beginSlideshow: ->
 
@@ -56,7 +54,7 @@ class @com.ee.ProjectView
     cb = =>
       @slideshowNext()
 
-    setTimeout cb, @slideshowInterval 
+    @timeoutUids.push setTimeout( cb, @slideshowInterval )
     null
 
   ###
@@ -64,7 +62,7 @@ class @com.ee.ProjectView
   ###
   slideshowNext: ->
     if !@isSlideshowEnabled
-      clearInterval @slideshowIntervalUid
+      @stopSlideshow()
       return
 
     @showNext()
@@ -72,7 +70,7 @@ class @com.ee.ProjectView
     cb = =>
       @slideshowNext()
 
-    @slideshowIntervalUid = setTimeout( cb, @slideshowInterval )
+    @timeoutUids.push setTimeout( cb, @slideshowInterval )
     null
 
 
@@ -93,6 +91,32 @@ class @com.ee.ProjectView
     if @a?
       $(".nav-count").html("""#{index + 1}/#{@imageIds.length}""")
 
+
+  ###
+  Just show the image at the given index - don't animate
+  ###
+  setCurrentImageNoAnimation: (index) ->
+    for id, imgIndex in @imageIds
+      if imgIndex == index 
+        $("##{id}").removeClass("hidden")
+      else
+        $("##{id}").addClass("hidden")
+    
+    @currentIndex = index
+    null
+
+
+  ###
+  Stops the slideshow from being triggered
+  ###
+  stopSlideshow: ->
+    for item, index in @timeoutUids
+      clearTimeout item 
+
+    @timeoutUids = []
+    @isSlideshowEnabled = false
+    null
+
   ###
   Perform transition to the next or previous image 
   ###
@@ -101,66 +125,61 @@ class @com.ee.ProjectView
     if @transitionInProgress
       return
 
-
     @updateCount index
+
     if @currentIndex == -1
-      for id, imgIndex in @imageIds
-        if imgIndex == index 
-          $("##{id}").removeClass("hidden")
-        else
-          $("##{id}").addClass("hidden")
-      
-      @currentIndex = index
+      @setCurrentImageNoAnimation( index )
       return
-    else
 
-      @transitionInProgress = true
+    @stopSlideshow()
+    @transitionInProgress = true
 
+    appWidth = "#{com.ee.appWidth}px"
 
-      appWidth = "#{com.ee.appWidth}px"
+    outgoingPx = if direction == "left" then "-#{appWidth}" else appWidth
+    incomingPx = if direction == "left" then appWidth else "-#{appWidth}"
 
-      outgoingPx = if direction == "left" then "-#{appWidth}" else appWidth
-      incomingPx = if direction == "left" then appWidth else "-#{appWidth}"
+    $currentImage = $("##{@imageIds[@currentIndex]}")
+    $currentImage
+      .addClass('left-animatable')
+      .css('left', outgoingPx)
 
-      $currentImage = $("##{@imageIds[@currentIndex]}")
+    animationCompleted = =>
       $currentImage
-        .addClass('left-animatable')
-        .css('left', outgoingPx)
+        .removeClass('left-animatable')
+        .addClass('hidden')
+      @transitionInProgress = false
+      @beginSlideshow()
 
-      currentCb = =>
-        $currentImage
-          .removeClass('left-animatable')
-          .addClass('hidden')
-        @transitionInProgress = false
+    setTimeout animationCompleted, 550
 
-      setTimeout currentCb, 550
+    $nextImage = $("##{@imageIds[index]}")
 
-      $nextImage = $("##{@imageIds[index]}")
+    $nextImage
+      .css('left', incomingPx)
+      .removeClass('hidden')
 
+    cb = =>
       $nextImage
-        .css('left', incomingPx)
-        .removeClass('hidden')
+        .addClass('left-animatable')
+        .css('left', '0px')
 
+    setTimeout cb, 0
 
-      cb = =>
-        $nextImage
-          .addClass('left-animatable')
-          .css('left', '0px')
-
-      setTimeout cb, 0
-
-      @currentIndex = index
+    @currentIndex = index
 
     null
 
    
+  ###
+  Get the holder - TODO - should be a var
+  ###
   $holder: -> $("##{@contentUid}")
 
   ###
   If this project view contains multiple images show the next one to the right
   ###
   showNext: -> 
-
     if @imageIds.length <= 1
       return 
 
@@ -178,64 +197,28 @@ class @com.ee.ProjectView
     @setCurrentImage index, "right"
 
   ###
-  Transition this project view out of the page, then hide it 
-  @param direction either 'up' or 'down'
+  Show this project view by either sliding from above or below the browser window
   ###
-  hide: (direction) ->
-    console.log "ProjectView:hide: #{@projectData.title}, #{direction}"
-    directionClass = if direction == "up" then "north" else "south"
-    height = com.ee.appHeight
-    height = 1200
-    ## TODO: TopPos needs to be the height of the scaled image.
-    topPos = if "up" then "-#{height}px" else "#{height}px"
-    console.log "top to -> #{topPos}"
-    
-    @$holder()
-      .addClass("top-animatable")
-      .addClass(directionClass )
-
-    cb1 = =>
-      @$holder()
-        .addClass("hidden")
-        .removeClass("top-animatable")
-        .removeClass( directionClass )
-        @reset()
-
-    setTimeout cb1, 700
-
-    @removeNavArrows @a
-
-    @isSlideshowEnabled = false
-    clearInterval @slideshowIntervalUid
-
-  reset: ->
-    for id, imgIndex in @imageIds
-      $("##{id}").addClass("hidden")
-      $("##{id}").css('left', '0px')
-      $("##{id}").removeClass('left-animatable', '0px')
-    
-    $("##{@imageIds[0]}").removeClass('hidden')
-
-    @currentIndex = 0
-    null
-
   show: (direction, callback, a) ->
-    console.log "ProjecView:show: #{@projectData.title}, #{direction}"
+    #console.log "ProjecView:show: #{@projectData.title}, #{direction}"
     @a = a
     dirClass = if direction == "up" then "south" else "north"
+    
+    height = $('.project-img').height() 
+    topPos = if direction == "up" then "#{height}px" else "-#{height}px"
 
+    applyTopPos = =>
+      @$holder().css('top', topPos)
 
-    cb0 = =>
-      @$holder().addClass(dirClass)
-
-    cb = =>
+    triggerAnimation = =>
       @$holder()
         .addClass("top-animatable")
         .removeClass("hidden")
-        .removeClass(dirClass)
+        .css('top', '0px')
 
-    setTimeout cb0, 0
-    setTimeout cb, 10
+    #TODO: Is there a better way than using timeouts?
+    setTimeout applyTopPos, 0
+    setTimeout triggerAnimation, 10
 
     setTimeout =>
       callback( @imageIds.length )
@@ -248,6 +231,49 @@ class @com.ee.ProjectView
     @setDescription()
     @beginSlideshow()
     @showTint()
+
+  ###
+  Transition this project view out of the page, then hide it 
+  @param direction either 'up' or 'down'
+  ###
+  hide: (direction) ->
+    #console.log "ProjectView:hide: #{@projectData.title}, #{direction}"
+    height = $('.project-img').height() 
+    topPos = if direction == "up" then "-#{height}px" else "#{height}px"
+    
+    @$holder()
+      .addClass("top-animatable")
+      .css('top', topPos )
+
+    hideCompleted = =>
+      @$holder()
+        .addClass("hidden")
+        .removeClass("top-animatable")
+        .css('top', '0px' )
+      @reset()
+
+    setTimeout hideCompleted, 700
+
+    @removeNavArrows @a
+
+    @isSlideshowEnabled = false
+    @stopSlideshow()
+
+  ###
+  Reset the project view so that the first image is visible
+  ###
+  reset: ->
+    for id, imgIndex in @imageIds
+      $("##{id}").addClass("hidden")
+      $("##{id}").css('left', '0px')
+      $("##{id}").removeClass('left-animatable', '0px')
+    
+    $("##{@imageIds[0]}").removeClass('hidden')
+
+    @currentIndex = 0
+    null
+
+  
 
   ###
   Apply tint class to right bar if required
