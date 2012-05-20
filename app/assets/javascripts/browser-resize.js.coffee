@@ -1,5 +1,4 @@
-#browser_resize
-console.log "browser_resize"
+"use strict"
 
 imageResize = ->
 
@@ -8,8 +7,6 @@ imageResize = ->
 
   com.ee.appWidth =  Math.max( $('.work-holder').width(), STANDARD_WIDTH )
   com.ee.appHeight = Math.max( $('.work-holder').height(), STANDARD_HEIGHT)
-
-  console.log "w: #{com.ee.appWidth}, h: #{com.ee.appHeight}"
 
   #find out who is off the largest
   wDiff = com.ee.appWidth - STANDARD_WIDTH
