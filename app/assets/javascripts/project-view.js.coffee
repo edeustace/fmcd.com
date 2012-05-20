@@ -218,12 +218,12 @@ class @com.ee.ProjectView
 
     #TODO: Is there a better way than using timeouts?
     setTimeout applyTopPos, 0
-    setTimeout triggerAnimation, 10
+    setTimeout triggerAnimation, 100
 
+    @setBodyColor()
     setTimeout =>
       callback( @imageIds.length )
       @addNavArrows a, @imageIds.length if @imageIds.length > 1 
-      @setBodyColor()
       @updateCount @currentIndex
     , 550
       
