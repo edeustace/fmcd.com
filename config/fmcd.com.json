@@ -128,8 +128,8 @@
         "description": " Experimental interface design that explores the dynamic relationship between human perception and our environment. Images of a journey through city space are combined with symbols and text so that the user can navigate themselves through the narrative sequence. ",
         "bg_color" : "#EFEFEF",
         "images": [
-            "/images/freiraum_01.jpg",
-            "/images/freiraum_02.jpg",
+            "/images/Freiraum_01.jpg",
+            "/images/Freiraum_02.jpg",
            "/images/sb_01.jpg",
            "/images/sb_02.jpg"
         ]
