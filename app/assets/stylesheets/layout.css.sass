@@ -7,6 +7,7 @@ $line-height: 18px
 $logo-top: 100px
 $default-font-family: 'Lato', sans-serif
 $title-font-family: 'Lato', sans-serif
+$tint-alpha: 0.4
 
 @mixin animatable( $property )
   +transition-property($property)
@@ -74,8 +75,7 @@ li
     background-color: transparentize( $main-color, 1)
     @include animatable( background-color )
     z-index: 10003
-    &:hover
-      background-color: transparentize($main-color, 0.3)
+   
 
     .logo
       top: $logo-top
@@ -90,7 +90,7 @@ li
     font-size: 11px
 
   .tint
-    background-color: transparentize($main-color, 0.3)
+    background-color: transparentize($main-color, $tint-alpha)
   .no-tint
     background-color: transparentize( $main-color, 1)
 
