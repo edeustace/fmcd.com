@@ -4,46 +4,16 @@ $content-top: 200px
 $content-padding: 20px
 $animation-duration: 430ms
 $line-height: 18px
-$logo-top: 100px
-$default-font-family: 'Lato', sans-serif
-$title-font-family: 'Lato', sans-serif
-$tint-alpha: 0.4
-
-@mixin animatable( $property )
-  +transition-property($property)
-  +transition-duration($animation-duration)
-  +transition-timing-function(ease-in-out)
-
 
 body
-  font-family: $default-font-family
   overflow-x: hidden
   overflow-y: hidden
-  font-size: 10px
+  font-family: Arial, Helvetica, sans-serif
+  font-size: 11px
   background-color: opacify($main-color, 1)
 
 li
   padding: 2px
-
-.nav-count
-  position: relative
-  top: -3px
-
-.nav-arrow
-  &:hover
-    opacity: 0.5
-
-.title
-  font-family: $title-font-family
-  color: white
-  font-size: 14px
-  font-weight: bold
-  text-transform: uppercase
-
-.line-break
-  color: white
-  padding-bottom: 8px
-
 
 .brand
   color: rgba(255,255,255, 0.9)
@@ -51,12 +21,12 @@ li
 .columns
   div
     float: left
-    width: $bar-width
-    color: #f5f5f5
+    width: 200px
+    color: f5f5f5
     line-height: $line-height
-    font-size: 11px
-    padding-right: 20px
-    padding-left: 20px
+    font-size: 10px
+    padding-right: 10px
+    padding-left: 10px
 
 .bar-holder
   width: 100%
@@ -68,48 +38,49 @@ li
 
 
   .left-bar
+    font-family: Arial, Helvetica, sans-serif
     font-size: 12px
     width: $bar-width
     float: left
     height: 100%
     background-color: transparentize( $main-color, 1)
-    @include animatable( background-color )
+    -webkit-transition: background-color $animation-duration ease-in-out
     z-index: 10003
-   
-
-    .logo
-      top: $logo-top
-      left: 20px
-      position: absolute
-    
-    .h5
-      color: white
-      font-family: $title-font-family
+    &:hover
+      background-color: transparentize($main-color, 0.3)
+  #_logo
+    float: top
+    padding-right: 300px
 
   #_home_link
     font-size: 11px
-
-  .tint
-    background-color: transparentize($main-color, $tint-alpha)
-  .no-tint
-    background-color: transparentize( $main-color, 1)
 
   .right-bar
     right: 0px
     //left: 195px  
     position: absolute
+    background-color: transparentize( $main-color, 1)
     width: $bar-width + 0
     height: 100%
     color: f5f5f5
-    @include animatable( background-color )
+    -webkit-transition: background-color $animation-duration ease-in-out
+    &:hover
+      background-color: transparentize($main-color, 0.3)
 
     #project-view-title
+      font-family: 'Raleway', Helvetica, Arial, sans-serif
+      font-size: 14px
+      font-weight: bold
+      text-transform: uppercase
+      //text-decoration: underline
 
 
     #project-view-description
+      font-family: Arial, Helvetica, sans-serif
       padding-top: 0px
       font-size: 11px
       line-height: 18px
+      //font-style: italic
 
   .bar-contents
     padding: $content-padding
@@ -119,11 +90,8 @@ li
     .shadowed
       text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
     
-    li
-      a
-        //text-transform: uppercase
-      
     a
+      //text-shadow: 1px 1px 1px rgba(0,0,0, 0.9) 
       text-decoration: none
       color: lighten( $main-color, 80%)
       font-size: 11px
@@ -159,28 +127,19 @@ li
   position: absolute
   //+transition-property(top)
 
-
-
 .top-animatable
   //-webkit-transition: top 350ms linear
-
-  @include animatable( top )
-  //-webkit-transition: top $animation-duration ease-in-out
+  -webkit-transition: top $animation-duration ease-in-out
 
 .left-animatable
   //-webkit-transition: left 350ms linear
-  @include animatable( left )
-  //-webkit-transition: left $animation-duration ease-in-out
-
-
-
+  -webkit-transition: left $animation-duration ease-in-out
 
 .north
   position:absolute
   top: -850px
 
 .south
-  position:absolute
   top: 850px
 
 .project-img

@@ -18,7 +18,7 @@
 
 
         var newData = #{@json_data}
-        controller = new com.ee.MainPageController(newData.projects, newData.slideshow_interval, newData.default_bg_color)
+        controller = new com.ee.MainPageController(newData.projects, newData.slideshow_interval, newData.default_bg_color, newData.left_arrow, newData.right_arrow)
       })
 
 
@@ -46,6 +46,7 @@
         #project-view-title.title
         = render :partial => "line_break"
         #project-view-description
+        = render :partial => "line_break"
         #project-view-navigation-holder
 
   .work-holder
