@@ -4,7 +4,7 @@ It slides up or down when being shown and the images within the project slide le
 ###
 class @com.ee.ProjectView
 
-  constructor: (@projectData, @index, @slideshowInterval, @defaultBgColor) ->
+  constructor: (@projectData, @index, @slideshowInterval, @defaultBgColor, @leftArrow, @rightArrow) ->
     @titleId = "project-view-title"
     @descriptionId = "project-view-description"
     @imageHolderId = "project-view-images"
@@ -89,7 +89,7 @@ class @com.ee.ProjectView
   ### 
   updateCount: (index) ->
     if @a?
-      $(".nav-count").html("""#{index + 1}/#{@imageIds.length}""")
+      $(".nav-count").html("""#{index + 1} of #{@imageIds.length}""")
 
 
   ###
@@ -280,9 +280,13 @@ class @com.ee.ProjectView
   ###
   showTint: ->
     if @isTintEnabled
+      $(".left-bar").addClass('tint') 
+      $(".left-bar").removeClass('no-tint') 
       $(".right-bar").addClass('tint') 
       $(".right-bar").removeClass('no-tint') 
     else 
+      $(".left-bar").removeClass('tint')
+      $(".left-bar").addClass('no-tint')
       $(".right-bar").removeClass('tint')
       $(".right-bar").addClass('no-tint')
 
@@ -299,15 +303,18 @@ class @com.ee.ProjectView
   addNavArrows: (a, count) ->
 
     @$navHolder.append """
+     
+      <a class="nav-arrow" id="left-arrow" href="javascript:void(0)"><img src="#{@leftArrow}"/></a>
+      
       <span class="nav-count" style="color: white; font-size: 11px" ></span>
-      <a class="nav-arrow" id="left-arrow" href="javascript:void(0)"><</a>
-      <a class="nav-arrow" id="right-arrow" href="javascript:void(0)">></a>
+
+      <a class="nav-arrow" id="right-arrow" href="javascript:void(0)"><img src="#{@rightArrow}"</a>
     """
 
-    $(a).parent().find("#left-arrow").click =>
+    $("#left-arrow").click =>
       @showPrevious()
 
-    $(a).parent().find("#right-arrow").click =>
+    $("#right-arrow").click =>
       @showNext()
 
   ###

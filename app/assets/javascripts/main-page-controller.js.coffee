@@ -6,7 +6,7 @@ com.ee = (com.ee || {})
 class @com.ee.MainPageController
 
 
-  constructor: (@mainPageData, @slideshowInteval, @defaultBgColor)->
+  constructor: (@mainPageData, @slideshowInteval, @defaultBgColor, @leftArrow, @rightArrow)->
 
     @LEFT = 37
     @RIGHT = 39
@@ -32,7 +32,7 @@ class @com.ee.MainPageController
           """
       $link = $("##{linkUid}")
       link = $link[0]
-      pv = new com.ee.ProjectView(data, index, @slideshowInteval, @defaultBgColor)
+      pv = new com.ee.ProjectView(data, index, @slideshowInteval, @defaultBgColor, @leftArrow, @rightArrow)
       $.data link, 'projectView', pv
       $link.click (e) => @onMenuLinkClick e
       @links.push(link)
