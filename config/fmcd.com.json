@@ -1,6 +1,6 @@
 {
 
-"logo" : "/images/fm-logo03.png",
+"logo" : "/images/fm-logo.png",
 "slideshow_interval" : "4500",
 "default_bg_color" : "#000000",
 "left_arrow" : "/images/arrow_left.png",
@@ -18,7 +18,7 @@
     },
         {
         "title": "Answers",
-        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting and redesigning the content for mobile and tablet formats. <br/> <br/> Digital Communications Award, 2011 <br/> iF Communication Design Award 2012 & 2011 <br/>  <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/>Agency: Virtual Identity <br/>  <br/>  ",
+        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting and redesigning the content for mobile and tablet formats. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/>At Virtual Identity <br/> ",
         "bg_color" : "#efefef",
         "images": [
             "/images/answers_01.jpg",
@@ -30,8 +30,8 @@
         ]
     },
     {
-        "title": "Siemens",
-        "description": " <font color='red'> Logo design, </font> website design and realisation for the Oslo based copywriting and proofreading company.<br/><text decoration='underline'> www.pureedit.net </text decoration>",
+        "title": "Siemens ",
+        "description": "Redesign of the Social Media and Apps section of the Siemens website. The design includes a variety of expandable displays for multi-filter, navigation and search options. <br/> <br/> <a href='http://www.siemens.com'>www.siemens.com</a><br/>At Virtual Identity <br/>",
         "bg_color" : "#ffffff",
         "images": [
            "/images/siemens_09.jpg",
@@ -42,7 +42,7 @@
     },
     {
         "title": "The Hidden Leek ",
-        "description": " The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in Roscommon, Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity.",
+        "description": " The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in Roscommon, Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity. <br/> <br/> <a href='http://www.hiddenleek.com'>www.hiddenleek.com</a> <br/>",
         "bg_color" : "#EFEFEF",
         "images": [
             "/images/leek_01.jpg",
@@ -54,7 +54,7 @@
     },
      {
         "title": "Pure Edit",
-        "description": " Logo design, website design and realisation for the Oslo based copywriting and proofreading company. <br/><a href='http://pureedit.net'>pureedit.net</a> ",
+        "description": "Logo design, website design and realisation for the Oslo based copywriting and proofreading company. <br/> <br/><a href='http://pureedit.net'>pureedit.net</a> <br/>",
         "bg_color" : "#EFEFEF",
         "images": [
             "/images/pureedit_01.jpg",
@@ -66,7 +66,7 @@
  
     {
         "title": "LGS Bayreuth 2016",
-        "description": "A competition entry for the design of the regional garden festival. The design includes concepts for permanent and temporary landscape exhibitions. alongside concepts for the permanent use of the park and connecting spaces. With the given competition theme of 'As the guest of Wilhelmine of Bayreuth', the design uses topographical elements and sightlines to provide views to views to the baroque palaces and parks built during her reign. Awarded the fourth prize. While at ST Raum A",
+        "description": "A competition entry for the design of the regional garden festival. The design includes concepts for permanent and temporary landscape exhibitions. alongside concepts for the permanent use of the park and connecting spaces. With the given competition theme of 'As the guest of Wilhelmine of Bayreuth', the design uses topographical elements and sightlines to provide views to views to the baroque palaces and parks built during her reign. <br/><br/>Awarded the competition fourth prize. <br/>For ST Raum A <br/>",
         "bg_color" : "#CDCC60",
         "images": [
             "/images/bayreuth_01.jpg",
@@ -79,7 +79,7 @@
     },
     {
         "title": "Forum Vogelsang",
-        "description": "The design is part of an invited competition entry for a permanent exhibition to document the story of 'NS- Ordensburg Vogelsang', an arrangement of barracks, community halls and sports arenas, built in the 1930s in order to train a new Nazi elite. The design concept focuses on the intimate connection between the historical location and contemporary processing of the contents. The exhibition is physically defined by two forms:one, a large glass wall and the other, a variety of v-shaped elements, which feature across the site, displaying information and acting as a way finding system. As well as contributing to the concept development, I was also responsible for the Interior perspectives, plans and multimedia screen design.",
+        "description": "The design is part of an invited competition entry for a permanent exhibition to document the story of 'NS- Ordensburg Vogelsang', an arrangement of barracks, community halls and sports arenas, built in the 1930s in order to train a new Nazi elite. The design concept focuses on the intimate connection between the historical location and contemporary processing of the contents. The exhibition is physically defined by two forms:one, a large glass wall and the other, a variety of v-shaped elements, which feature across the site, displaying information and acting as a way finding system. As well as contributing to the concept development, I was also responsible for the Interior perspectives, plans and multimedia screen design. <br/><br/>For Duncan McCauley<br/>",
         "bg_color" : "#9C9C9C",
         "images": [
             "/images/vogelsang_01.jpg",
@@ -103,7 +103,7 @@
     },
     {
         "title": "Das Blaue Buch",
-        "description": "Inhouse publication for the Basel based architecture practice. The design is based on dual blue and white office colours. Printed on recycling paper and set on long envelope, double-sided paper. ",
+        "description": "Inhouse publication for the Basel based architecture practice. The design is based on dual blue and white office colours. Printed on recycling paper and set on long envelope, double-sided paper.<br/><br/> For Bau Büro ",
         "bg_color" : "#38696D",
         "images": [
             "/images/Blauebuch_01.jpg",
@@ -142,14 +142,14 @@
         "description": "",
         "uid": "_information_link",
         "contentUid": "_information_content",
-        "bg_color" : "#AA3737"
+        "bg_color" : "#6B6789"
     },
     {
         "title": "Contact",
         "description": "",
         "uid": "_contact_link",
         "contentUid": "_contact_content",
-          "bg_color" : "#4F4F8D"
+          "bg_color" : "#89837B"
     }
 ]
 }
