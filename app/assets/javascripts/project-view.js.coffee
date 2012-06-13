@@ -251,6 +251,8 @@ class @com.ee.ProjectView
         .removeClass("top-animatable")
         .css('top', '0px' )
       @reset()
+      #stopSlideshow again - just to be safe.
+      @stopSlideshow()
 
     setTimeout hideCompleted, 700
 
