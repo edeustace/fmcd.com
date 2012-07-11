@@ -33,14 +33,14 @@
         = render :partial => "line_break"
 
         %ul{ :class => "project-menu"}
-        %br/
-        %br/
+        = render :partial => "line_break"
         %a{ :href => "javascript:void(0)", :id => "_information_link"}
           = "INFORMATION"
         %br/
         %br/
         %a{ :href => "javascript:void(0)", :id => "_contact_link"}
           = "CONTACT"
+        = render :partial => "line_break"
     .right-bar
       .bar-contents
         #project-view-title.title
