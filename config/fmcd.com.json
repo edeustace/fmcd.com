@@ -11,7 +11,10 @@
         "title": "Welcome",
         "description": "Welcome to the portfolio website of <br/>Fiona McDermott, Spatial and Digital Media Designer, currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
         "bg_color" : "#ffffff",
-         "uid": "_home_link"
+        "images": [
+            "/images/home.jpeg"
+        ],
+        "uid": "_home_link"
     },
         {
         "title": "Answers",
