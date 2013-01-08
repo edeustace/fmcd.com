@@ -16,6 +16,19 @@
         ],
         "uid": "_home_link"
     },
+ {
+        "title": "Sendlinger Tor",
+        "description": "An invited competition design for the renovation of the Sendlinger Tor U-Bahn Station in Munich.The context of the old city gate Sendlinger Tor present at street level is reinterpreted in the form of light gates for the three underground levels.  In doing so it creates a powerful visual identity for the station and the individual levels are distinquished through sets of unique light gate structures that help to reinforce passenger orientation and wayfinding.The light gates, are produced through different compositions of LEDs, each adopting to the architecture of the level. The intensity and frequency of the lights are designed to reflect major points of orientation within the station such as the exit points.<br/>  Architecture, Interior Design <br/>For COBE Berlin, 2012 <br/> ",
+        "bg_color" : "#efefef",
+        "images": [
+            "/images/answers_01.jpg",
+           "/images/answers_02.jpg",
+           "/images/answers_03.jpg",
+           "/images/answers_04.jpg",
+           "/images/answers_041.jpg"
+        ]
+    },
+
         {
         "title": "Answers",
         "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting the content and redesigning the user interface and interactions for mobile and tablet formats. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/> <br/> Screen Design, Corporate Design <br/>For the agency Virtual Identity, 2012 <br/> ",
