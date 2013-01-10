@@ -1,7 +1,7 @@
 {
 
 "logo" : "/images/fm-logo.png",
-"slideshow_interval" : "4500",
+"slideshow_interval" : "7000",
 "default_bg_color" : "#000000",
 "left_arrow" : "/images/arrow_left_green.png",
 "right_arrow" : "/images/arrow_right_green.png",
@@ -18,15 +18,37 @@
     },
 
   {
-        "title": "Answers 2",
-        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting the content and redesigning the user interface and interactions for mobile and tablet formats. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/> <br/> Screen Design, Corporate Design <br/>For the agency Virtual Identity, 2012 <br/> ",
+        "title": "Communication Zone Garching",
+        "description": "The proposed site is a 31 ha area located between the university cluster and the village of Garching, near Munich, Germany. The brief asks for a better communication between the two urban districts, innovative forms of housing for students and researchers, and new public spaces and amenities.  In a team of three,  I developed a plan of public spaces,  a framework for the building block typology and the  integration of programming objectives, including area calculations.  I was responsible for the analysis and research of  the existing physical and social context, the overall strategic design including transport and accessibility planning, and the study and detailing of street and public space profiles. <br/> <br/> <a href='http://www.cobe.dk'>www.cobe.dk</a><br/> <br/> Urban Design, Masterplanning <br/>For COBE, Berlin, 2012 <br/> With Landscape Architects Manmadeland, Berlin <br/> ",
+
         "bg_color" : "#efefef",
         "images": [
-            "/images/tor_01.jpg",
-           "/images/tor_02.jpg",
-           "/images/answers_03.jpg",
-           "/images/answers_04.jpg",
-           "/images/answers_041.jpg"
+	"/images/garch_01.jpg",
+	"/images/garch_02.jpg",
+	"/images/garch_03.jpg",
+	"/images/garch_07.jpg",
+	"/images/garch_04.jpg",
+	"/images/garch_06.jpg",
+	"/images/garch_05.jpg"
+        ]
+    },
+
+
+  {
+        "title": "Sendlinger Tor",
+        "description": "An invited competition design for the renovation of the Sendlinger Tor U-Bahn Station in Munich. The context of the old city gate Sendlinger Tor present at street level is reinterpreted in the form of light gates for the three underground levels. In doing so it creates a powerful visual identity for the station and the individual levels are distinquished through sets of unique light gate structures that help to reinforce passenger orientation and wayfinding. The light gates, are produced through different compositions of LEDs, each adopting to the architecture of the level. The intensity and frequency of the lights are designed to reflect major points of orientation within the station such as the exit points. <br/> <br/> <a href='http://www.cobe.dk'>www.cobe.dk</a><br/> <br/> Architecture, Interior Design <br/>For COBE, Berlin, 2012 <br/> Renders by Luxigon<br/> ",
+
+        "bg_color" : "#efefef",
+        "images": [
+	"/images/tor_01.jpg",
+	"/images/tor_05.jpg",
+	"/images/tor_06.jpg",
+	"/images/tor_03.jpg",
+	"/images/tor_04.jpg",
+        "/images/tor_091.jpg",
+	"/images/tor_012.jpg",
+        "/images/tor_010.jpg",
+        "/images/tor_011.jpg"
         ]
     },
 
