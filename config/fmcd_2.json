@@ -1,0 +1,49 @@
+{
+
+"logo" : "/images/fm-logo.png",
+"slideshow_interval" : "4500",
+"default_bg_color" : "#000000",
+"left_arrow" : "/images/arrow_left_green.png",
+"right_arrow" : "/images/arrow_right_green.png",
+"projects" : [
+   
+    {
+        "title": "Welcome",
+        "description": "Welcome to the portfolio website of <br/>Fiona McDermott, Spatial and Digital Media Designer, currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
+        "bg_color" : "#ffffff",
+        "images": [
+            "/images/home03.jpg"
+        ],
+        "uid": "_home_link"
+    },
+
+  {
+        "title": "Answers 2",
+        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting the content and redesigning the user interface and interactions for mobile and tablet formats. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/> <br/> Screen Design, Corporate Design <br/>For the agency Virtual Identity, 2012 <br/> ",
+        "bg_color" : "#efefef",
+        "images": [
+            "/images/tor_01.jpg",
+           "/images/tor_02.jpg",
+           "/images/answers_03.jpg",
+           "/images/answers_04.jpg",
+           "/images/answers_041.jpg"
+        ]
+    },
+
+ 
+    {
+        "title": "Information",
+        "description": "",
+        "uid": "_information_link",
+        "contentUid": "_information_content",
+        "bg_color" : "#6B6789"
+    },
+    {
+        "title": "Contact",
+        "description": "",
+        "uid": "_contact_link",
+        "contentUid": "_contact_content",
+          "bg_color" : "#89837B"
+    }
+]
+}
