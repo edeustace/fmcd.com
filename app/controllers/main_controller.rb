@@ -1,6 +1,7 @@
 class MainController < ApplicationController
   def index
-    @json_data = IO.read("#{Rails.root}/config/fmcd.com.json")
+    json_file = ENV['FMCD_JSON_FILE'] || "fmcd.com.json"
+    @json_data = IO.read("#{Rails.root}/config/#{json_file}")
     @json_data
   end
 end

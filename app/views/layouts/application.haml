@@ -1,5 +1,8 @@
 # encoding: utf-8
 - parsed_json = ActiveSupport::JSON.decode(@json_data)
+- information_partial = ENV['FMCD_INFORMATION_PARTIAL'] || "information"
+- contact_partial = ENV['FMCD_CONTACT_PARTIAL'] || "contact"
+- override_style = ENV['FMCD_OVERRIDE_STYLE'] || "override"
 !!! XML
 %html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
   %head
@@ -10,6 +13,7 @@
 
    
     = stylesheet_link_tag "application", :media => "all"
+    = stylesheet_link_tag "#{override_style}", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
@@ -52,9 +56,9 @@
   .work-holder
     #project-view-images
     .content-holder{ :id => "_information_content" }
-      = render "information"
+      = render "#{information_partial}"
     .content-holder{ :id => "_contact_content" }
-      = render "contact"
+      = render "#{contact_partial}"
   
 
  
