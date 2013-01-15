@@ -1,6 +1,7 @@
 {
 
 "logo" : "/images/fm-logo.png",
+"logo_home" : "/images/fm-logo03.png",
 "slideshow_interval" : "4500",
 "default_bg_color" : "#000000",
 "left_arrow" : "/images/arrow_left_green.png",

@@ -14,6 +14,8 @@ class @com.ee.ProjectView
     @contentUid = "project__#{@index}"
     @isTintEnabled = true
 
+   
+
     @timeoutUids = []
 
     if @projectData.uid?
@@ -230,6 +232,7 @@ class @com.ee.ProjectView
     @setTitle()
     @setDescription()
     @beginSlideshow()
+    @addUidAsClass(@projectData.uid)
     @showTint()
 
   ###
@@ -276,6 +279,20 @@ class @com.ee.ProjectView
     null
 
   
+  addUidAsClass: (uid) ->
+
+    removeClassFn = (index,css) ->
+      m = css.match(/\b_[a-z_]+/g)
+      console.log "M: #{m}"
+      console.log m
+      (m || []).join(" ")
+
+    $(".left-bar").removeClass(removeClassFn)
+    $(".right-bar").removeClass(removeClassFn)
+
+    $(".left-bar").addClass(uid) 
+    $(".right-bar").addClass(uid) 
+    null
 
   ###
   Apply tint class to right bar if required

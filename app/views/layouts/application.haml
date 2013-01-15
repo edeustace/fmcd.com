@@ -32,6 +32,9 @@
       .logo
         %a{ :href => "javascript:void(0)", :id => "_home_link"}
           %img{ :src => "#{parsed_json['logo']}", :id => "_logo"} 
+      .logo_home
+        %a{ :href => "javascript:void(0)", :id => "_home_link"}
+          %img{ :src => "#{parsed_json['logo_home']}", :id => "_logo"} 
       .bar-contents
         .h5.title projects 
         = render :partial => "line_break"

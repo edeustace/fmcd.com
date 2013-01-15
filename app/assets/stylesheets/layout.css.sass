@@ -79,6 +79,17 @@ li
   left: 0px
   top: 0px
 
+.left-bar._home_link 
+  .logo_home
+    display: block
+  .logo
+    display: none
+
+.left-bar
+  .logo_home
+    display: none 
+  .logo
+    display: block
 
 .left-bar
   font-size: 12px
@@ -90,7 +101,7 @@ li
   @include animatable( background-color )
   z-index: 10003
 
-  .logo
+  .logo, .logo_home
     top: $logo-top
     left: 20px
     position: absolute
