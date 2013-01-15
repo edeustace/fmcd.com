@@ -2,7 +2,7 @@
 
 "logo" : "/images/fm-logo.png",
 "slideshow_interval" : "7000",
-"logo_home" : "/images/fm-logo03.png",
+"logo_home" : "/images/fm_logo01.png",
 "default_bg_color" : "#000000",
 "left_arrow" : "/images/arrow_left_green.png",
 "right_arrow" : "/images/arrow_right_green.png",
@@ -10,7 +10,7 @@
    
     {
         "title": "Welcome",
-        "description": "Welcome to the website of <br/>Fiona McDermott, M(Arch) B(Sc), Urban Designer & Researcher <br/> <br/> Use the arrow keys to navigate. <br/> ",
+        "description": "Fiona McDermott, M(Arch) B(Sc) Urban Designer & Researcher <br/> <br/> <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>Use the arrow keys to navigate. <br/> ",
         "bg_color" : "#ffffff",
 
         "images": [
