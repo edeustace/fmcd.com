@@ -9,97 +9,48 @@
    
     {
         "title": "Welcome",
-        "description": "Welcome to the portfolio website of <br/>Fiona McDermott, Spatial and Digital Media Designer, currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
+        "description": "Welcome to the website of <br/>Fiona McDermott, M(Arch) B(Sc), Urban Designer & Researcher <br/> <br/> Use the arrow keys to navigate. <br/> ",
         "bg_color" : "#ffffff",
+
         "images": [
-            "/images/home03.jpg"
+            "/images/home001.jpg"
         ],
         "uid": "_home_link"
     },
 
   {
         "title": "Communication Zone Garching",
-        "description": "The proposed site is a 31 ha area located between the university cluster and the village of Garching, near Munich, Germany. The brief asks for a better communication between the two urban districts, innovative forms of housing for students and researchers, and new public spaces and amenities.  In a team of three,  I developed a plan of public spaces,  a framework for the building block typology and the  integration of programming objectives, including area calculations.  I was responsible for the analysis and research of  the existing physical and social context, the overall strategic design including transport and accessibility planning, and the study and detailing of street and public space profiles. <br/> <br/> <a href='http://www.cobe.dk'>www.cobe.dk</a><br/> <br/> Urban Design, Masterplanning <br/>For COBE, Berlin, 2012 <br/> With Landscape Architects Manmadeland, Berlin <br/> ",
+        "description": "Designed to be a meeting ground between the village of Garching and the nearby university campus, the proposed plan for the 31 hectare mixed-use site offers a multitude of opportunities for communication between the two urban districts.  Diverse forms of compact housing and public amenities extend from the village (south) and campus (north), allowing space for a large communal park.  A 1.8 km shared space path encircles the park, incorporating within it playgrounds, cafes and sports fields.  <br/> <br/> Urban Design, Masterplanning <br/>For <a href='http://www.cobe.dk'> COBE, Berlin,</a> 2012 <br/> With Landscape Architects Manmadeland, Berlin <br/> ",
 
         "bg_color" : "#efefef",
         "images": [
-	"/images/garch_01.jpg",
-	"/images/garch_02.jpg",
 	"/images/garch_03.jpg",
 	"/images/garch_07.jpg",
+	"/images/garch_02.jpg",
 	"/images/garch_04.jpg",
 	"/images/garch_06.jpg",
-	"/images/garch_05.jpg"
+	"/images/garch_05.jpg",
+	"/images/garch_01.jpg"
         ]
     },
 
 
   {
         "title": "Sendlinger Tor",
-        "description": "An invited competition design for the renovation of the Sendlinger Tor U-Bahn Station in Munich. The context of the old city gate Sendlinger Tor present at street level is reinterpreted in the form of light gates for the three underground levels. In doing so it creates a powerful visual identity for the station and the individual levels are distinquished through sets of unique light gate structures that help to reinforce passenger orientation and wayfinding. The light gates, are produced through different compositions of LEDs, each adopting to the architecture of the level. The intensity and frequency of the lights are designed to reflect major points of orientation within the station such as the exit points. <br/> <br/> <a href='http://www.cobe.dk'>www.cobe.dk</a><br/> <br/> Architecture, Interior Design <br/>For COBE, Berlin, 2012 <br/> Renders by Luxigon<br/> ",
+        "description": "An invited competition for the renovation of the Sendlinger Tor U-Bahn Station in Munich. The context of the old city gate Sendlinger Tor is reinterpreted in the form of three distinct sets of light gates for the three underground levels, helping to create a powerful visual identity for the station while also reinforcing passenger orientation and wayfinding. The light gates, are produced through different compositions of LEDs, each adopting to the architecture of the level. The intensity and frequency of the lights are designed to reflect major points of orientation within the station such as the exit points. <br/>  <br/> Architecture, Interior Design <br/>For <a href='http://www.cobe.dk'> COBE, Berlin,</a> 2012 <br/> Renderings by Luxigon<br/> ",
 
         "bg_color" : "#efefef",
         "images": [
 	"/images/tor_01.jpg",
 	"/images/tor_05.jpg",
 	"/images/tor_06.jpg",
-	"/images/tor_03.jpg",
 	"/images/tor_04.jpg",
         "/images/tor_091.jpg",
-	"/images/tor_012.jpg",
-        "/images/tor_010.jpg",
         "/images/tor_011.jpg"
         ]
     },
 
-        {
-        "title": "Answers",
-        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting the content and redesigning the user interface and interactions for mobile and tablet formats. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/> <br/> Screen Design, Corporate Design <br/>For the agency Virtual Identity, 2012 <br/> ",
-        "bg_color" : "#efefef",
-        "images": [
-            "/images/answers_01.jpg",
-           "/images/answers_02.jpg",
-           "/images/answers_03.jpg",
-           "/images/answers_04.jpg",
-           "/images/answers_041.jpg"
-        ]
-    },
-    {
-        "title": "Siemens ",
-        "description": "Redesign of the Social Media and Apps section of the Siemens website. The design includes a variety of expandable displays for multi-filter, navigation and search options. I was responsible for the concept development, design and specifications. <br/> <br/> <a href='http://www.siemens.com'>www.siemens.com</a><br/><br/> Screen Design, Corporate Design <br/> For the agency Virtual Identity, 2011 <br/> ",
-        "bg_color" : "#ffffff",
-        "images": [
-           "/images/siemens_09.jpg",
-           "/images/siemens_10.jpg",
-           "/images/siemens_11.jpg"
-           
-        ]
-    },
-    {
-        "title": "The Hidden Leek ",
-        "description": " The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in Roscommon, Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity. <br/> <br/> <a href='http://www.hiddenleek.com'>www.hiddenleek.com</a> <br/> <br/> Identity, Screen Design, Programming <br/> 2012 <br/> ",
-        "bg_color" : "#EFEFEF",
-        "images": [
-            "/images/leek_01.jpg",
-            "/images/leek_02.jpg",
-            "/images/leek_05.jpg",
-            "/images/leek_03.jpg"
-           
-        ]
-    },
-     {
-        "title": "Pure Edit",
-        "description": "Logo design, website design and realisation for the Oslo based copywriting and proofreading company. <br/> <br/><a href='http://pureedit.net'>pureedit.net</a> <br/>  <br/> Identity, Screen Design, Programming <br/>2011 <br/> ",
-        "bg_color" : "#EFEFEF",
-        "images": [
-            "/images/pureedit_01.jpg",
-            "/images/pureedit_04.jpg",
-            "/images/pureedit_05.jpg"
-           
-        ]
-    },
- 
-    {
+            {
         "title": "LGS Bayreuth 2016",
         "description": "A competition entry for the design of the regional garden festival. The design includes concepts for permanent and temporary landscape exhibitions. alongside concepts for the permanent use of the park and connecting spaces. With the given competition theme of 'As the guest of Wilhelmine of Bayreuth', the design uses topographical elements and sightlines to provide views to views to the baroque palaces and parks built during her reign. <br/><br/>Awarded the competition fourth prize. <br/> <br/> Urban Design, Visualisation <br/>For ST Raum A, Berlin, 2011 ",
         "bg_color" : "#CDCC60",
@@ -126,50 +77,20 @@
                  
         ]
     },
-    {
-        "title": "Das Blaue Buch",
-        "description": "Inhouse publication for the Basel based architecture practice. The design is based on dual blue and white office colours. Printed on recycling paper and set on long envelope, double-sided paper.<br/><br/> Graphic Design, Print <br/> For Bau Büro, Basel, 2010<br/> ",
-        "bg_color" : "#38696D",
+      
+
+  {
+        "title": "Tempelhofer Freiheit",
+        "description": "With the closure of Tempelhof Airport in 2008,   it was decided  to systematically integrate intermediate and pioneer uses into the urban  development process for the site.  I worked with the private practice, tx in delivering a participatory framework for the planning and  accommodation of these uses.  Three key areas of the site were mapped and analysed for the tendering of uses within six  themes including neighbourhood integration, future technologies, knowledge and learning.<br/> <br/> <a href='http://www.tempelhoferfreiheit.de/en/get-involved'>www.tempelhoferfreiheit.de</a><br/><br/> <br/> Urban Planning, Participatory Design <br/>For  tx - büro für temporäre architektur,Berlin 2010 <br/> ",
+        "bg_color" : "#9C9C9C",
         "images": [
-            "/images/Blauebuch_01.jpg",
-            "/images/Blauebuch_02.jpg",
-             "/images/Blauebuch_03.jpg",
-            "/images/Blauebuch_04.jpg",
-              "/images/Blauebuch_05.jpg"
+            "/images/berTem_01.jpg",
+	    "/images/berTem_04.jpg",
+             "/images/berTem_02.jpg",
+              "/images/berTem_03.jpg"      
         ]
     },
-   {
-        "title": "Gundeldinger Feld",
-        "description": "The Gundeldinger Feld in Basel is the site of a former compressor factory which in 2000 was transformed into a multi-purpose site encompassing local cultural institutions, small businesses and workshops. The publication celebrates the tenth anniversary of the opening . The design inflects the activities and events subsequent to the transformation of the former site into a multi-purpose space. <br/> <br/> Graphic Design, Print <br/> For Gundeldinger Feld, Basel, 2010<br/> ",
-         "bg_color" : "#ffffff",
-        "images": [
-            "/images/gundeldingerfeld_01.jpg",
-            "/images/gundeldingerfeld_02.jpg",
-             "/images/gundeldingerfeld_03.jpg",
-            "/images/gundeldingerfeld_04.jpg",
-              "/images/gundeldingerfeld_05.jpg"
-        ]
-    },
-    {
-        "title": "Directions",
-        "description": " Experimental interface design that explores the dynamic relationship between human perception and our environment. Images of a journey through city space are combined with symbols and text so that the user can navigate themselves through the narrative sequence. ",
-        "bg_color" : "#E3E3E3",
-        "images": [
-            "/images/timeline_01.jpg",
-            "/images/timeline_02.jpg"
-        ]
-    },
-    {
-        "title": "Other",
-        "description": " A selection of print and screen works developed throughout the years. <br/><br/>2009 - 2012 <br/> <br/> Graphic Design, Print <br/> ",
-        "bg_color" : "#EFEFEF",
-        "images": [
-            "/images/Freiraum_01.jpg",
-            "/images/Freiraum_021.jpg",
-           "/images/sb_01.jpg",
-           "/images/sb_02.jpg"
-        ]
-    },
+
     {
         "title": "Information",
         "description": "",
