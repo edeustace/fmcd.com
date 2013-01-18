@@ -1,6 +1,8 @@
 {
 
-"logo" : "/images/fm-logo.png",
+"logo" : "/images/ben_01.png",
+"logo_home" : "/images/ben_01.png",
+
 "slideshow_interval" : "7000",
 "default_bg_color" : "#000000",
 "left_arrow" : "/images/arrow_left_green.png",
@@ -9,7 +11,7 @@
    
     {
         "title": "Welcome",
-        "description": "Welcome to the portfolio website of <br/>Fiona McDermott, Urban Designer, currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
+        "description": "Welcome to the Three Bens,<br/>the website of Fiona McDermott,<br/> Freelance Visual & UX Designer,<br/>currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
         "bg_color" : "#ffffff",
         "images": [
             "/images/home03.jpg"
@@ -19,7 +21,7 @@
 
          {
         "title": "Answers",
-        "description": "/answers is an on-line magazine as part of the Siemens global website which tells the personal stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting the content and redesigning the user interface and interactions for mobile and tablet formats. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/> <br/> Screen Design, Corporate Design <br/>For the agency Virtual Identity, 2012 <br/> ",
+        "description": "/answers is an on-line magazine as part of the Siemens global website, telling the stories of how Siemens technology is used around the world. The story formats include video, photography with text and interactive media. I was responsible for adapting the content and redesigning the user interface and interactions for mobile and tablet formats on Android and iOS devices. <br/> <br/> <a href='http://www.siemens.com/answers'>www.siemens.com/answers</a><br/> <br/> Screen Design, Corporate Design <br/>For the agency Virtual Identity, 2012 <br/> ",
         "bg_color" : "#efefef",
         "images": [
             "/images/answers_01.jpg",
@@ -38,6 +40,14 @@
            "/images/siemens_10.jpg",
            "/images/siemens_11.jpg"
            
+        ]
+    },
+    {
+        "title": "Soundcloud",
+        "description": "Icon and action bar design for the soundcloud iPhone app. <br/> <br/> <a href='http://soundcloud.com/apps/iphone'>soundcloud.com/apps/iphone</a><br/> <br/> Screen Design, Corporate Design <br/>For Soundcloud, 2012 <br/> ",
+        "bg_color" : "#efefef",
+        "images": [
+            "/images/soundcloud01.jpg"
         ]
     },
     {
@@ -63,7 +73,20 @@
            
         ]
     },
- 
+     {
+        "title": "St. Annes, Zlata",
+        "description": "Web and App Interface Design  to disseminate information about the architecture and history of the Church of St. Anne in Prague. The project includes various interactive elements including a plan detailing architectural features, a picture gallery and a timeline of historic events. <br/>  <br/> Interaction Design, Screen Design, Programming <br/>2011 <br/> ",
+        "bg_color" : "#EFEFEF",
+        "images": [
+            "/images/havel01.jpg",
+            "/images/havel02.jpg",
+            "/images/havel03.jpg",
+            "/images/havel04.jpg",
+            "/images/havel05.jpg",
+            "/images/havel06.jpg"
+           
+        ]
+    },
      
     {
         "title": "Das Blaue Buch",
