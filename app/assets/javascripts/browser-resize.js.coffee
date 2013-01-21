@@ -18,7 +18,7 @@ class @com.ee.BoxConstraints
         w: 1
         h: @minHeight/@minWidth
 
-    console.log "ratio: #{@ratio.w}:#{@ratio.h}"
+    #console.log "ratio: #{@ratio.w}:#{@ratio.h}"
 
   ###
   Given a w and h
@@ -50,8 +50,8 @@ STANDARD_HEIGHT = 850
 bc = new com.ee.BoxConstraints(STANDARD_WIDTH, STANDARD_HEIGHT)
 
 
-console.log bc.constrain 1462, 1026 
-console.log bc.constrain 1328, 859 
+#console.log bc.constrain 1462, 1026 
+#console.log bc.constrain 1328, 859 
 
 imageResize = ->
 

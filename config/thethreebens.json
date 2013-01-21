@@ -2,6 +2,10 @@
 
 "logo" : "/images/ben_01.png",
 "logo_home" : "/images/ben_01.png",
+"favicon" : "faviconben02.ico",
+"information_partial" : "information_bens",
+"contact_partial" : "contact_bens",
+"override_style" : "thethreebens",
 
 "slideshow_interval" : "4500",
 "default_bg_color" : "#000000",

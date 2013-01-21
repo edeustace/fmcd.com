@@ -6,6 +6,7 @@ class @com.ee.ProjectView
 
   constructor: (@projectData, @index, @slideshowInterval, @defaultBgColor, @leftArrow, @rightArrow) ->
     @titleId = "project-view-title"
+    @slideshowInterval = @slideshowInterval || 3000
     @descriptionId = "project-view-description"
     @imageHolderId = "project-view-images"
     @imageIds = []
@@ -13,8 +14,6 @@ class @com.ee.ProjectView
     @isSlideshowEnabled = false
     @contentUid = "project__#{@index}"
     @isTintEnabled = true
-
-   
 
     @timeoutUids = []
 
@@ -44,6 +43,9 @@ class @com.ee.ProjectView
   Start the slideshow if there are more than one images to show
   ###
   beginSlideshow: ->
+
+    if !@isSlideshowEnabled 
+      return
 
     if !@projectData?
       return
@@ -142,16 +144,21 @@ class @com.ee.ProjectView
     incomingPx = if direction == "left" then appWidth else "-#{appWidth}"
 
     $currentImage = $("##{@imageIds[@currentIndex]}")
+
     $currentImage
       .addClass('left-animatable')
-      .css('left', outgoingPx)
+
+    setTimeout( =>
+      $currentImage
+        .css('left', outgoingPx)
+    , 40)
 
     animationCompleted = =>
       $currentImage
         .removeClass('left-animatable')
         .addClass('hidden')
       @transitionInProgress = false
-      @beginSlideshow()
+      @beginSlideshow() if @isSlideshowEnabled
 
     setTimeout animationCompleted, 550
 
@@ -159,6 +166,8 @@ class @com.ee.ProjectView
 
     $nextImage
       .css('left', incomingPx)
+
+    $nextImage
       .removeClass('hidden')
 
     cb = =>
@@ -166,7 +175,7 @@ class @com.ee.ProjectView
         .addClass('left-animatable')
         .css('left', '0px')
 
-    setTimeout cb, 0
+    setTimeout cb, 80
 
     @currentIndex = index
 
@@ -224,14 +233,14 @@ class @com.ee.ProjectView
 
     @setBodyColor()
     setTimeout =>
-      callback( @imageIds.length )
+      callback( @imageIds.length ) if callback?
       @addNavArrows a, @imageIds.length if @imageIds.length > 1 
       @updateCount @currentIndex
     , 550
       
     @setTitle()
     @setDescription()
-    @beginSlideshow()
+    #@beginSlideshow()
     @addUidAsClass(@projectData.uid)
     @showTint()
 
@@ -283,8 +292,6 @@ class @com.ee.ProjectView
 
     removeClassFn = (index,css) ->
       m = css.match(/\b_[a-z_]+/g)
-      console.log "M: #{m}"
-      console.log m
       (m || []).join(" ")
 
     $(".left-bar").removeClass(removeClassFn)

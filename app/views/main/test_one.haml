@@ -1,0 +1,48 @@
+# encoding: utf-8
+!!! XML
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+  %head
+    %meta{ "http-equiv" => "Content-Type", :content=> "text/html; charset=UTF-8" }
+    %title
+      Fiona McDermott
+
+    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Lato"
+
+   
+    = stylesheet_link_tag "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+
+    :javascript
+      $(document).ready(function(){
+        var data = {
+          title: "blah",
+          description: "desc",
+          images: [
+            "/images/garch_03.jpg",
+            "/images/garch_07.jpg",
+            "/images/garch_01.jpg"
+          ]
+
+        }
+        var view = new com.ee.ProjectView(data,0);
+        view.show()
+      })
+
+
+%body
+  .bar-holder
+    .left-bar
+      .bar-contents
+
+    .right-bar
+      .bar-contents
+        #project-view-title.title
+        #project-view-description
+        #project-view-navigation-holder
+
+  .work-holder
+    #project-view-images
+  
+
+ 

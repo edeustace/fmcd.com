@@ -23,7 +23,6 @@ class @com.ee.MainPageController
     for data, index in @mainPageData
 
       if data.uid?
-        console.log "not creating link for #{data.uid}"
         linkUid = data.uid
       else
         linkUid = "__project__#{index}"
