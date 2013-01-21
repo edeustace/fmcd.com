@@ -3,7 +3,7 @@
 "logo" : "/images/ben_01.png",
 "logo_home" : "/images/ben_01.png",
 
-"slideshow_interval" : "7000",
+"slideshow_interval" : "4500",
 "default_bg_color" : "#000000",
 "left_arrow" : "/images/arrow_left_green.png",
 "right_arrow" : "/images/arrow_right_green.png",
@@ -12,7 +12,7 @@
     {
         "title": "Welcome",
         "description": "Welcome to The Three Bens,<br/>the website of Fiona McDermott,<br/> Freelance Visual & UX Designer,<br/>currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
-        "bg_color" : "#3C3657",
+        "bg_color" : "#7fffd4",
         "images": [
             "/images/home03.jpg"
         ],
