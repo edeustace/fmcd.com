@@ -12,7 +12,7 @@
     {
         "title": "Welcome",
         "description": "Welcome to The Three Bens,<br/>the website of Fiona McDermott,<br/> Freelance Visual & UX Designer,<br/>currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
-        "bg_color" : "#7fffd4",
+        "bg_color" : "#ffffff",
         "images": [
             "/images/home03.jpg"
         ],
