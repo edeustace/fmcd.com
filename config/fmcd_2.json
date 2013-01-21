@@ -11,7 +11,7 @@
    
     {
         "title": "Welcome",
-        "description": "Welcome to the Three Bens,<br/>the website of Fiona McDermott,<br/> Freelance Visual & UX Designer,<br/>currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
+        "description": "Welcome to The Three Bens,<br/>the website of Fiona McDermott,<br/> Freelance Visual & UX Designer,<br/>currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
         "bg_color" : "#ffffff",
         "images": [
             "/images/home03.jpg"
@@ -44,7 +44,7 @@
     },
     {
         "title": "Soundcloud",
-        "description": "Icon and action bar design for the soundcloud iPhone app. <br/> <br/> <a href='http://soundcloud.com/apps/iphone'>soundcloud.com/apps/iphone</a><br/> <br/> Screen Design, Corporate Design <br/>For Soundcloud, 2012 <br/> ",
+        "description": "Proposed icon and action bar design for the soundcloud iPhone app. <br/> <br/> <a href='http://soundcloud.com/apps/iphone'>soundcloud.com/apps/iphone</a><br/> <br/> Screen Design, Corporate Design <br/>For Soundcloud, 2012 <br/> ",
         "bg_color" : "#efefef",
         "images": [
             "/images/soundcloud01.jpg"
