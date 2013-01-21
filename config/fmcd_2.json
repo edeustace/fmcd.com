@@ -12,7 +12,7 @@
     {
         "title": "Welcome",
         "description": "Welcome to The Three Bens,<br/>the website of Fiona McDermott,<br/> Freelance Visual & UX Designer,<br/>currently based in Berlin.<br/> <br/> Use the arrow keys to navigate. <br/> ",
-        "bg_color" : "#ffffff",
+        "bg_color" : "#3C3657",
         "images": [
             "/images/home03.jpg"
         ],
@@ -52,7 +52,7 @@
     },
     {
         "title": "The Hidden Leek ",
-        "description": " The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in Roscommon, Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity. <br/> <br/> <a href='http://www.hiddenleek.com'>www.hiddenleek.com</a> <br/> <br/> Identity, Screen Design, Programming <br/> 2012 <br/> ",
+        "description": " The Hidden Leek Supper Club is a monthly restaurant ran by young chefs in Roscommon, Ireland. The identity comprises a brightly coloured hand drawn leek and a signature characterized by its leafy typeface. The simplicity of the name is counterbalanced by vibrant color options and flexible logo compositions that allow for a customizable identity. <br/> <br/> <a href='http://www.thehiddenleek.com'>www.thehiddenleek.com</a> <br/> <br/> Identity, Screen Design, Programming <br/> 2012 <br/> ",
         "bg_color" : "#EFEFEF",
         "images": [
             "/images/leek_01.jpg",
